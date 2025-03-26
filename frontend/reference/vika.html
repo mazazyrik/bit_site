@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виктория Симанчук - Кандидат на пост Председателя ССИ ЭМИТ</title>
+    <style>
+        @font-face {
+            font-family: 'TD Mars';
+            src: url('static/TD Mars.otf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Involve';
+            src: url('static/Involve-VF.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Involve', sans-serif;
+            background: url('static/background_new.png') no-repeat center center;
+            background-size: cover;
+            color: #474C59;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .video-header {
+            width: 100%;
+            max-width: 700px;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .video-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-content {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .header-content img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .header-content h1 {
+            font-family: 'TD Mars', sans-serif;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .show-header-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .block {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: url('static/block.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .block h2 {
+            font-family: 'TD Mars', sans-serif;
+            color: #474C59;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            background: url('static/footer.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact form styling */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #contact-form input, #contact-form textarea {
+            padding: 10px;
+            font-family: 'Involve', sans-serif;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        #contact-form input::placeholder, #contact-form textarea::placeholder {
+            color: #474C59;
+        }
+
+        #contact-form button {
+            padding: 12px;
+            background-color: #474C59;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Involve', sans-serif;
+        }
+
+        #contact-form button:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .block {
+                margin: 20px;
+                padding: 20px;
+            }
+            .header-content img {
+                width: 80px;
+            }
+            .header-content h1 {
+                font-size: 18px;
+            }
+        }
+        .success-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-header">
+        <img src="static/header-2.gif" alt="Анимация" />
+    </div>
+    
+    <div class="header-content" id="header-content">
+        <img src="static/logo_ss.png" alt="Логотип">
+        <h1>Виктория Симанчук</h1>
+    </div>
+    
+    <section class="block" id="about">
+        <h2>О кандидате</h2>
+        <p>Я, Симанчук Виктория Андреевна, студентка 2 курса прикладной информатики, баллотируюсь на пост Председателя XVI созыва Студенческого Совета ИЭМИТ.</p>
+    </section>
+    
+    <section class="block" id="achievements">
+        <h2>Мои достижения в XV созыве ССИ</h2>
+        <ul>
+            <li>Член Центра Цифровых Коммуникаций 15 созыва Студенческого Совета ЭМИТ</li>
+            <li>Глава рабочей группы «Цифровое Комьюнити ЭМИТ»</li>
+            <li>Глава рабочей группы «Интеллектуальный марафон ЭМИТ»</li>
+            <li>Глава рабочей группы «Цифровой Форум «BIT» ЭМИТ 2025»</li>
+            <li>Школа IT-коммуникаций – успешно закончила курс по направлению “Разработка”</li>
+            <li>Актив ЭМИТ 2023-2024 – топ 1 активист</li>
+            <li>Династия ЭМИТ - топ 1 участник</li>
+            <li>Актив ЭМИТ 2024-2025 – куратор</li>
+            <li>Школа молодого лидера – участник</li>
+        </ul>
+    </section>
+    
+    <section class="block" id="why-me">
+        <h2>Почему именно я?</h2>
+        <p>Я баллотируюсь на пост председателя, потому что хочу сделать ИЭМИТ особенным в сфере IT и повысить уровень цифровизации. Моя цель — создать сообщество единомышленников, где каждый сможет реализовать свои идеи и внести вклад в развитие института.</p>
+    </section>
+    
+    <section class="block" id="problems">
+        <h2>Проблемы и решения</h2>
+
+        <h3>Обновление центров:</h3>        
+        <p>Центр Маркетинга и Анализа будет подвергнут расформированию из-за недостаточной эффективности. Вместо него будет назначен ответственный аналитик, а также по одному аналитику в каждый центр для отслеживания работы созыва.</p>
+        
+        <p>Центр Внутренних Коммуникаций будет разделен на Центр Организации Мероприятий и Центр Общественных Позиций, так как включает в себя слишком большое количество направлений работы.</p>
+        
+        <h3>Кооптация:</h3>
+        <p>Текущая практика кооптации недостаточно эффективна и гибка, отчего было принято решение обновлять состав Студенческого Совета не реже 2 раз в год. Важно, что помимо этого, исключения из состава и кооптация новых участников могут происходить по решению закрытого собрания президиума в любое определенное им время.</p>
+        
+        <h3>Роль СМИ ЭМИТ:</h3>
+        <p>В настоящее время публикации СМИ ЭМИТ недостаточно вовлекают студентов, поэтому для повышения эффективности работы необходимо разработать контент-план посредством совместной работы главы редакции и президиума СС ЭМИТ. Такой подход поможет сделать публикации более целевыми, информативными и привлекательными для студентов.</p>
+        
+        <p>С другими изменениями Вы можете ознакомиться в подробной предвыборной программе  <a href="https://vk.com/wall-194871645_346">по ссылке</a> и на дебатах, которые пройдут 12 марта в 17:00 в 327 зале 5 корпуса.</p>
+    </section>
+    
+    <section class="block" id="goals">
+        <h2>Цели</h2>
+        <p>Сделать ЭМИТ ведущим цифровым институтом, организовать ключевые IT-мероприятия и создать цифровые продукты.</p>
+    </section>
+
+    <section class="block" id="mission">
+        <h2>Миссия</h2>
+        <p>Формирование активного студенческого сообщества, способного развивать цифровую среду института.</p>
+    </section>
+
+    <section class="block" id="slogan">
+        <h2>Мой слоган</h2>
+        <p><em>Инновации в каждом движении</em></p>
+    </section>
+
+    
+    <section class="block" id="contact">
+        <h2>Свяжитесь со мной</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="text" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="success-message" id="success-message">Ваше сообщение успешно передано</div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Виктория Симанчук. Все права защищены.</p>
+        <p>
+            <a href="#about">О кандидате</a> |
+            <a href="#achievements">Мои достижения</a> |
+            <a href="#goals">Цели</a> |
+            <a href="#mission">Миссия</a> |
+            <a href="#problems">Проблемы и решения</a>
+        </p>
+        <div>
+            <a href="https://t.me/ss1m4" target="_blank">Telegram</a> |
+            <a href="https://vk.com/ss.sima" target="_blank">ВКонтакте</a> |
+            <a href="https://vk.com/viktoriasima?from=groups" target="_blank">Сообщество ВКонтакте</a>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("scroll", function() {
+            const scrolled = window.scrollY;
+            const background = document.querySelector("body");
+            background.style.backgroundPosition = "center " + (scrolled * 0.5) + "px";
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const blocks = document.querySelectorAll(".block");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+            blocks.forEach(block => observer.observe(block));
+            
+            const headerContent = document.getElementById("header-content");
+            setTimeout(() => headerContent.classList.add("show-header-content"), 800);
+        });
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            
+            const formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                text: event.target.text.value
+            };
+
+            
+            fetch('http://simanchuk.ddns.net/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.ok) {
+                    
+                    document.getElementById('success-message').style.display = 'block';
+                    
+                    event.target.reset();
+                } else {
+                    
+                    alert('Ошибка при отправке сообщения. Попробуйте еще раз.');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Ошибка при отправке сообщения. Попробуйте еще раз.');
+            });
+        });
+    </script>
+</body>
+</html>
