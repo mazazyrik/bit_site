@@ -1,0 +1,91 @@
+.animation-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show-animation-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+.complex-move-6 {
+  animation: complexMove-6 7s infinite alternate ease-in-out;
+}
+
+@keyframes complexMove-6 {
+  0% { transform: translate(0, 0) rotate(0); }
+  33% { transform: translate(10px, -16px) rotate(1deg); }
+  66% { transform: translate(-10px, 8px) rotate(-1deg); }
+  100% { transform: translate(0, -10px) rotate(0); }
+}
+
+.complex-move-5 {
+  animation: complexMove-5 6s infinite alternate ease-in-out;
+}
+
+@keyframes complexMove-5 {
+  0% { transform: translate(0, 0) rotate(0); }
+  33% { transform: translate(-10px, 16px) rotate(1deg); }
+  66% { transform: translate(10px, -8px) rotate(-1deg); }
+  100% { transform: translate(0, 10px) rotate(0); }
+}
+
+.complex-move-4 {
+  animation: complexMove-4 8s infinite alternate ease-in-out;
+}
+
+@keyframes complexMove-4 {
+  0% { transform: translate(0, 0) rotate(0); }
+  33% { transform: translate(5px, 16px) rotate(1deg); }
+  66% { transform: translate(-5px, -8px) rotate(-1deg); }
+  100% { transform: translate(0, -10px) rotate(0); }
+}
+
+.complex-move-2 {
+  animation: complexMove-2 9s infinite alternate ease-in-out;
+}
+
+@keyframes complexMove-2 {
+  0% { transform: translate(0, 0) rotate(0); }
+  33% { transform: translate(-7px, 5px) rotate(1deg); }
+  66% { transform: translate(9px, -8px) rotate(-1deg); }
+  100% { transform: translate(0, 5px) rotate(0); }
+}
+
+.complex-move-1 {
+  animation: complexMove-1 9s infinite alternate ease-in-out;
+}
+
+@keyframes complexMove-1 {
+  0% { transform: translate(0, 0) rotate(0); }
+  33% { transform: translate(20px, 25px) rotate(1deg); }
+  66% { transform: translate(-10px, 10px) rotate(-1deg); }
+  100% { transform: translate(15, 5px) rotate(0); }
+}
+
+
+.smooth-float {
+  animation: smoothFloat 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes smoothFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 527px) {
+  .smooth-float {
+    animation: none;
+  }
+}

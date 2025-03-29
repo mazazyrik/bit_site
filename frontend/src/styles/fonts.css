@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'HomeVideoRegular';
+  src:
+    url('../fonts/HomeVideo-Regular.otf') format('otf'),
+    url('../fonts/HomeVideo-Regular.ttf') format('ttf'),
+    url('../fonts/HomeVideo-Regular.woff') format('woff'),
+    url('../fonts/HomeVideo-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YffRareTrial-Giga-Regular';
+  src:
+    url('../fonts/YFFRARETRIAL-GigaRegular.ttf') format('ttf'),
+    url('../fonts/YFFRARETRIAL-GigaRegular.otf') format('otf'),
+    url('../fonts/YFFRARETRIAL-GigaRegular.woff') format('woff'),
+    url('../fonts/YFFRARETRIAL-GigaRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YffRareTrial-Giga-Light';
+  src:
+    url('../fonts/YFFRARETRIAL-GigaLight.ttf') format('ttf'),
+    url('../fonts/YFFRARETRIAL-GigaLight.otf') format('otf'),
+    url('../fonts/YFFRARETRIAL-GigaLight.woff') format('woff'),
+    url('../fonts/YFFRARETRIAL-GigaLight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YffRareVFTrial';
+  src:
+    url('../fonts/YFF-RARE-VF-TRIAL.ttf') format('ttf'),
+    url('../fonts/YFF-RARE-VF-TRIAL.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YffRareTrial-GigaBold';
+  src:
+    url('../fonts/YFFRARETRIAL-GigaBold.woff') format('woff');
+}
