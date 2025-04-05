@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru" style="font-size: 16px; background-color: #000; height: 100%;">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Регистрация</title>
+  <link rel="icon" href="../src/images/012.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles/fonts.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <script src="./scripts/index.js" defer></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000 !important;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .section-register {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 60px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .reg-image-title {
+      max-width: 70%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+
+    .registration-form {
+      max-width: 500px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background-image: url('../images/row.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-input {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-family: inherit;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-input::placeholder {
+      color: #ccc;
+    }
+
+    .form-input:focus {
+      outline: 2px solid #fff;
+    }
+
+    .button {
+      background-color: white;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      background-color: #ddd;
+    }
+
+    /* Секция с пикселями */
+    .part-1-section-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .pixel-position {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: none; /* Убрана обводка */
+      z-index: 1;
+      animation: pixelMove 5s infinite alternate;
+    }
+
+    .pixel-position img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes pixelMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(150px, 150px);
+      }
+    }
+
+    footer, .section-6 {
+      position: relative;
+      z-index: 10;
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Пиксели -->
+  <div class="part-1-section-2">
+    <img class="pixel-position pixel-6 lazy-image complex-move-6" src="../src/images/Vector6.svg" style="top: 5%; left: 5%;" />
+    <img class="pixel-position pixel-5 lazy-image complex-move-5" src="../src/images/Vector5.svg" style="top: 20%; left: 75%;" />
+    <img class="pixel-position pixel-4 lazy-image complex-move-4" src="../src/images/Vector4.svg" style="top: 35%; left: 25%;" />
+    <img class="pixel-position pixel-3 lazy-image complex-move-4" src="../src/images/Vector3.svg" style="top: 50%; left: 60%;" />
+    <img class="pixel-position pixel-2 lazy-image complex-move-2" src="../src/images/Vector2.svg" style="top: 65%; left: 10%;" />
+    <img class="pixel-position pixel-1 lazy-image complex-move-1" src="../src/images/Vector1.svg" style="top: 80%; left: 70%;" />
+  </div>
+
+  <!-- Регистрация -->
+  <section class="section-register">
+    <img src="../src/images/reg.png" alt="Регистрация" class="reg-image-title" />
+    
+    <form action="http://127.0.0.1:8000" method="POST" class="registration-form">
+      <input type="text" name="name" placeholder="Имя" required class="form-input" />
+      <input type="email" name="email" placeholder="Электронная почта" required class="form-input" />
+      <textarea name="message" placeholder="Сообщение" rows="4" class="form-input"></textarea>
+      <button type="submit" class="button font-home-video">Отправить</button>
+    </form>
+  </section>
+
+  <!-- Футер и соцсети -->
+  <section class="section-6">
+    <div class="logo-section-6">
+      <logo>
+        <img src="../src/images/01.svg" class="logo-bit" alt="Логотип 01" />
+      </logo>
+      <h3 class="text-underlogo-section-6 text-section-6">Цифровой форум 2025</h3>
+    </div>
+    <div>
+      <h1 class="home-video text-header-section-6">Наши соцсети</h1>
+      <div class="all-buttons">
+        <a href="#" class="social-button button">
+          <img src="../src/images/telegram-button.svg" class="telegram-image" alt="Иконка телеграм" />
+          <h3 class="text-buttons-section-6 text-section-6">TG-канал BIT</h3>
+        </a>
+        <a href="#" class="social-button button">
+          <img src="../src/images/vk-button.svg" class="vk-image" alt="Иконка ВК" />
+          <h3 class="text-buttons-section-6 text-section-6">Сообщество ВК</h3>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h1 class="home-video text-header-section-6">Партнеры</h1>
+      <h3 class="home-video text-section-6">лого партнеров сюда</h3>
+      <div class="partners-logos">
+        <logo><img /></logo>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="text-footer">2025 BIT BLBS</p>
+  </footer>
+</body>
+</html>

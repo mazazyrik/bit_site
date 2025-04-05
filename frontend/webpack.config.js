@@ -55,10 +55,15 @@ module.exports = {
     ]
   },
   plugins: [
-    // Копирование index.html
+    // Главная страница
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    // Страница регистрации
+    new HtmlWebpackPlugin({
+      template: './src/reg.html',
+      filename: 'reg.html'
     }),
     // Извлечение CSS
     new MiniCssExtractPlugin({
@@ -105,4 +110,4 @@ module.exports = {
       chunks: 'all',
     },
   }
-};
+}
