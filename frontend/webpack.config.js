@@ -3,13 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+
 module.exports = {
-  entry: './src/scripts/index.js', // Главная точка входа
+  entry: {
+    main: './src/scripts/index.js',
+    reg: './src/scripts/reg.js'  // Если есть отдельный JS для reg.html
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.[contenthash].js',
     clean: true,
-    publicPath: '/'
+    publicPath: ''
   },
   module: {
     rules: [
@@ -17,15 +21,15 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'postcss-loader'
         ],
         include: [
           path.resolve(__dirname, 'src/styles'),
-          path.resolve(__dirname, 'src/animations.css'),
-          path.resolve(__dirname, 'src/fonts.css'),
-          path.resolve(__dirname, 'src/index.css')
+          path.resolve(__dirname, 'src/styles/animations.css'),
+          path.resolve(__dirname, 'src/styles/fonts.css'),
+          path.resolve(__dirname, 'src/styles/index.css')
         ]
       },
       // Обработка шрифтов
@@ -58,12 +62,14 @@ module.exports = {
     // Главная страница
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      chunks: ['main']
     }),
     // Страница регистрации
     new HtmlWebpackPlugin({
-      template: './src/reg.html',
-      filename: 'reg.html'
+      template: './src/pages/reg.html',
+      filename: 'reg.html',
+      chunks: ['reg']
     }),
     // Извлечение CSS
     new MiniCssExtractPlugin({

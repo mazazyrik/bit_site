@@ -1,0 +1,358 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000 !important;
+  color: white;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-register {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 60px;
+  text-align: center;
+  z-index: 10;
+}
+
+.reg-image-title {
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.registration-form {
+  box-sizing: border-box;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  font-family: 'YffRareTrial-Giga-Light';
+  font-size: 30px;
+  letter-spacing: 3%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.input-around {
+  background-color: #646464;
+  opacity: 0.7;
+  z-index: 0;
+  width: 90%;
+  padding: 18px;
+  border-radius: 40px;
+  color: #000;
+}
+
+label {
+  align-self: start;
+  opacity: 1;
+}
+
+.form-input {
+  background-color: #a8a8a8;
+  opacity: 1;
+  border: none;
+  color: black;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-size: 19px;
+  outline: none;
+  width: 80%;
+  z-index: 1;
+}
+
+.form-input:hover {
+  cursor: pointer;
+}
+
+.form-input::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+
+.form-input:focus {
+  outline: 2px solid #fff;
+}
+
+.button {
+  background-color: #696969;
+  align-self: center;
+  border-radius: 10px;
+  width: 50%;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 23px;
+  font-family: inherit;
+  transition: all 0.4s ease;
+}
+
+
+
+.button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #555;
+}
+
+/* Стили для активной кнопки */
+.button:not([disabled]) {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.button:not([disabled]):hover {
+  transform: scale(1.1);
+}
+
+
+.checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding-left: 55px;
+  padding-block: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 19px;
+  user-select: none;
+  font-family: 'YffRareTrial-Giga-Light';
+  letter-spacing: 3%;
+}
+
+/* Скрываем нативный чекбокс */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Кастомный чекбокс */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: 7px solid #909090;
+  border-radius: 4px;
+  transition: all 0.3s;
+  /* align-content: start; */
+}
+
+/* При наведении */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ddd;
+}
+
+/* Когда чекбокс отмечен */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+/* Галочка (скрыта по умолчанию) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Показываем галочку при выборе */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Стиль галочки */
+.checkbox-container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.hidden-checkbox:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.condition {
+  background-color: #646464;
+  opacity: 0.7;
+  padding: 20px;
+  border-radius: 50px;  
+  font-size: 19px;
+}
+
+
+/* Секция с пикселями */
+.part-1-section-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pixel-position {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none; /* Убрана обводка */
+  z-index: -1;
+  animation: pixelMove 5s infinite alternate;
+}
+
+.pixel-position img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes pixelMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(150px, 150px);
+  }
+}
+
+.section-6 {
+  background-color: rgba(59, 59, 59, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 1;
+  margin-top: 70px;
+}
+
+.logo-section-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.logo-bit {
+  width: 120px;
+  align-self: center;
+}
+
+.text-header-section-6 {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.social-button {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.telegram-image {
+  width: 80px;
+}
+
+.vk-image {
+  width: 80px;
+}
+
+.all-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.text-buttons-section-6 {
+  margin: 0;
+}
+
+.text-section-6 {
+  font-family: 'YffRareTrial-Giga-Light';
+  color: white;
+  font-weight:400;
+  letter-spacing:0.1em;
+  font-size: 21px;
+  
+}
+
+.text-underlogo-section-6 {
+  margin: 0;
+}
+
+.partners-logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-video {
+  font-family: 'HomeVideoRegular';
+  font-weight: 400;
+  line-height: 95%;
+  letter-spacing: 3%;
+}
+
+.footer {
+  background-color: rgba(42, 42, 42, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-footer {
+  font-family: 'YffRareTrial-Giga-Light';
+  color: white;
+  font-weight:400;
+  letter-spacing:0.1em;
+  font-size: 22px;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 27px;
+}
