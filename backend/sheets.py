@@ -1,13 +1,14 @@
 # flake8: noqa
+import aiohttp
 import logging
-import requests
+
 
 url = (
     "https://script.google.com/macros/s/AKfycbwUaHXoe3uAfCQJvfiCaXie6SJk6EPBZs--esCQuRlQ--q_M1T_Q0KSx3kGSPQBTtq2/exec"
 )
 
 
-def write_to_sheets(id, name, email, vuz, birth):
+async def write_to_sheets(id, name, email, vuz, birth):
     data = {
         "id": id,
         "name": name,
@@ -15,7 +16,9 @@ def write_to_sheets(id, name, email, vuz, birth):
         "vuz": vuz,
         "birth": birth
     }
-    try:
-        requests.post(url, json=data)
-    except Exception as e:
-        logging.error(e)
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.post(url, json=data) as response:
+                response.raise_for_status()
+        except Exception as e:
+            logging.error(e)

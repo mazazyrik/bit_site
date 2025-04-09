@@ -20,6 +20,6 @@ async def form(data: FormSchema):
         raise HTTPException(
             status_code=400, detail="Не удалось сохранить форму")
     try:
-        write_to_sheets(form.id, form.name, form.email, form.vuz, form.birth)
+        await write_to_sheets(form.id, form.name, form.email, form.vuz, form.birth)
     except Exception as e:
         logging.error(e)
