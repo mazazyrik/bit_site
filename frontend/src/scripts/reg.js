@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Отправляем данные на сервер
-            const response = await fetch('http://127.0.0.1:8000/api/form', {
+            const response = await fetch('http://bit-ranepa.ru/api/form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
