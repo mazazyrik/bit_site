@@ -1,6 +1,6 @@
-import '../styles/fonts.css';
-import '../styles/reg.css';
-import '../styles/animations.css';
+// import '../styles/fonts.css';
+// import '../styles/reg.css';
+// import '../styles/animations.css';
 
 document.getElementById('dateInput').addEventListener('input', function(e) {
   // Удаляем все, кроме цифр
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Функция обновления состояния кнопки
   function updateButtonState() {
     submitButton.disabled = !originalCheckbox.checked;
-  
     const event = new Event('change', { bubbles: true });
     originalCheckbox.dispatchEvent(event);
   }
@@ -65,15 +64,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.registration-form');
     const submitButton = document.getElementById('submitButton');
     const agreeCheckbox = document.getElementById('agreeCheckbox');
     
     // Активировать кнопку при согласии
-    agreeCheckbox.addEventListener('change', function() {
-        submitButton.disabled = !this.checked;
-    });
+    // agreeCheckbox.addEventListener('change', function() {
+    //     submitButton.disabled = !this.checked;
+    // });
     
     // Обработка отправки формы
     form.addEventListener('submit', async function(e) {

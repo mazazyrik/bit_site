@@ -123,6 +123,7 @@ h5 {
   display: grid;
   grid-template-columns: 50% 50%;
   height: 900px;
+  z-index: -1;
 }
 
 .image-3 {
@@ -176,7 +177,7 @@ h5 {
 
 .pixel-position {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
 .pixel-6 {

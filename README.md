@@ -1,2 +1,2 @@
 docker compose up 
-docker compose up --build #чтобы пересобрать образы
+docker compose up --build #чтобы пересобрать образы 
