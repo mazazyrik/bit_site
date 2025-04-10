@@ -139,7 +139,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: -1;
+  z-index: 0;
 }
 
 .part-2-3-section-2 {
@@ -173,9 +173,10 @@ h5 {
   margin: 0;
 }
 
+
 .pixel-position {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 
 .pixel-6 {
