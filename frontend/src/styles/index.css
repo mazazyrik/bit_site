@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: rgba(100, 100, 100, 1);
+  /* z-index: -1; */
 }
 
 .section-1 {
@@ -140,13 +141,13 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 0;
+  z-index: -1;
 }
 
 .part-2-3-section-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  z-index: 0;
+  z-index: -1;
 }
 
 .part-2-section-2 {
@@ -628,12 +629,17 @@ h5 {
     width: 220px;
   }
 
+  .part-3-section-1 {
+    min-height: 550px;
+  }
+
   .section-2 {
-    height: 500px;
+    margin-top: 200px;
+    /* height: 500px; */
   }
 
   .part-1-section-2 {
-    height: 640px;
+    /* height: 640px; */
   }
 
   .text-section-2 {
