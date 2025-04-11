@@ -28,6 +28,16 @@ body {
   text-align: center;
   z-index: 10;
 }
+.text-footer {
+  font-family: 'YffRareTrial-Giga-Light';
+  color: white;
+  font-weight:400;
+  letter-spacing:0.1em;
+  font-size: 22px;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 27px;
+}
 
 .reg-image-title {
   max-width: 70%;
